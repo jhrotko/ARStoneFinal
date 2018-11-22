@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="CreatureType_BearDruid" size="0.125000 0.174895" />
+    <ImageTarget name="CreatureType_Alien" size="0.125000 0.174895" />
+    <ImageTarget name="BossType_NatureDragon" size="0.125000 0.174895" />
+    <ImageTarget name="EnhancementType_Vines" size="0.125000 0.174895" />
+    <ImageTarget name="EnhancementType_Revive" size="0.125000 0.174895" />
+    <ImageTarget name="EnhancementType_Heal" size="0.125000 0.174895" />
+    <ImageTarget name="EnhancementType_Fireball" size="0.125000 0.174895" />
+    <ImageTarget name="EnhancementType_Enrage" size="0.125000 0.174895" />
+    <ImageTarget name="EnhancementType_Armor" size="0.125000 0.174895" />
+    <ImageTarget name="CreatureType_Zombie" size="0.125000 0.174895" />
+    <ImageTarget name="CreatureType_DragonWhelp" size="0.125000 0.174895" />
+    <ImageTarget name="BossType_FireDragon" size="0.125000 0.174895" />
+    <ImageTarget name="BoardType_VolcanicZone" size="0.125000 0.174895" />
+    <ImageTarget name="BoardType_NatureZone" size="0.125000 0.174895" />
+    <ImageTarget name="Plummet" size="0.500000 0.696429" />
+    <ImageTarget name="Shock" size="0.500000 0.696429" />
+    <ImageTarget name="dragon" size="0.500000 0.696429" />
+    <ImageTarget name="zombie" size="0.500000 0.696429" />
+  </Tracking>
+</QCARConfig>

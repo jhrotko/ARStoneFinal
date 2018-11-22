@@ -1,0 +1,242 @@
+fileFormatVersion: 2
+guid: fcf1801a22df71142afe0fd3ca7bcd0a
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: breast
+    100004: chest
+    100006: head
+    100008: hips
+    100010: jaw
+    100012: Joint_2
+    100014: Joint_2_2
+    100016: Joint_2_3
+    100018: Joint_2_4
+    100020: Joint_2_5
+    100022: Joint_2_6
+    100024: L_ankle
+    100026: L_arm
+    100028: L_elbow
+    100030: L_finger1
+    100032: L_finger2
+    100034: L_foot
+    100036: L_frontarm
+    100038: L_frontelbow
+    100040: L_frontfingers
+    100042: L_frontfingerstip
+    100044: L_frontShoulder
+    100046: L_frontwrist
+    100048: L_Knee
+    100050: L_leg
+    100052: L_pink1
+    100054: L_pink2
+    100056: L_shoulder
+    100058: L_thumb1
+    100060: L_thumb2
+    100062: L_toes
+    100064: L_toestip
+    100066: L_wrist
+    100068: lip
+    100070: mesh
+    100072: neck
+    100074: R_ankle
+    100076: R_arm
+    100078: R_elbow
+    100080: R_finger1
+    100082: R_finger2
+    100084: R_foot
+    100086: R_frontarm
+    100088: R_frontelbow
+    100090: R_frontfingers
+    100092: R_frontfingerstip
+    100094: R_frontShoulder
+    100096: R_frontwrist
+    100098: R_Knee
+    100100: R_leg
+    100102: R_pink1
+    100104: R_pink2
+    100106: R_shoulder
+    100108: R_thumb1
+    100110: R_thumb2
+    100112: R_toes
+    100114: R_toestip
+    100116: R_wrist
+    100118: spine
+    100120: tip
+    400000: //RootNode
+    400002: breast
+    400004: chest
+    400006: head
+    400008: hips
+    400010: jaw
+    400012: Joint_2
+    400014: Joint_2_2
+    400016: Joint_2_3
+    400018: Joint_2_4
+    400020: Joint_2_5
+    400022: Joint_2_6
+    400024: L_ankle
+    400026: L_arm
+    400028: L_elbow
+    400030: L_finger1
+    400032: L_finger2
+    400034: L_foot
+    400036: L_frontarm
+    400038: L_frontelbow
+    400040: L_frontfingers
+    400042: L_frontfingerstip
+    400044: L_frontShoulder
+    400046: L_frontwrist
+    400048: L_Knee
+    400050: L_leg
+    400052: L_pink1
+    400054: L_pink2
+    400056: L_shoulder
+    400058: L_thumb1
+    400060: L_thumb2
+    400062: L_toes
+    400064: L_toestip
+    400066: L_wrist
+    400068: lip
+    400070: mesh
+    400072: neck
+    400074: R_ankle
+    400076: R_arm
+    400078: R_elbow
+    400080: R_finger1
+    400082: R_finger2
+    400084: R_foot
+    400086: R_frontarm
+    400088: R_frontelbow
+    400090: R_frontfingers
+    400092: R_frontfingerstip
+    400094: R_frontShoulder
+    400096: R_frontwrist
+    400098: R_Knee
+    400100: R_leg
+    400102: R_pink1
+    400104: R_pink2
+    400106: R_shoulder
+    400108: R_thumb1
+    400110: R_thumb2
+    400112: R_toes
+    400114: R_toestip
+    400116: R_wrist
+    400118: spine
+    400120: tip
+    2100000: alien
+    4300000: mesh
+    7400000: CINEMA_4D_Main
+    9500000: //RootNode
+    13700000: mesh
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: CINEMA_4D_Main
+      takeName: CINEMA_4D_Main
+      firstFrame: 0
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,196 @@
+fileFormatVersion: 2
+guid: f606307fe4fc7e24983d448b4bcc0f4b
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: RigChest
+    100004: RigHead
+    100006: RigJaw
+    100008: RigLBLeg1
+    100010: RigLBLeg2
+    100012: RigLBLegAnkle
+    100014: RigLBLegDigit11
+    100016: RigLEyelid
+    100018: RigLFLeg1
+    100020: RigLFLeg2
+    100022: RigLFLegAnkle
+    100024: RigLFLegCollarbone
+    100026: RigLFLegDigit11
+    100028: RigNeck1
+    100030: RigNeck2
+    100032: RigPelvis
+    100034: RigRBLeg1
+    100036: RigRBLeg2
+    100038: RigRBLegAnkle
+    100040: RigRBLegDigit11
+    100042: RigREyelid
+    100044: RigRFLeg1
+    100046: RigRFLeg2
+    100048: RigRFLegAnkle
+    100050: RigRFLegCollarbone
+    100052: RigRFLegDigit11
+    100054: RigRigLEar1
+    100056: RigRigREar1
+    100058: RigRoot
+    100060: RigSpine1
+    100062: RigSpine2
+    100064: RigTail1
+    100066: RigTail2
+    100068: RigTongue_1
+    100070: RigTongue_2
+    100072: RigTongue_3
+    100074: SK-AnimalsBear_Bear
+    400000: //RootNode
+    400002: RigChest
+    400004: RigHead
+    400006: RigJaw
+    400008: RigLBLeg1
+    400010: RigLBLeg2
+    400012: RigLBLegAnkle
+    400014: RigLBLegDigit11
+    400016: RigLEyelid
+    400018: RigLFLeg1
+    400020: RigLFLeg2
+    400022: RigLFLegAnkle
+    400024: RigLFLegCollarbone
+    400026: RigLFLegDigit11
+    400028: RigNeck1
+    400030: RigNeck2
+    400032: RigPelvis
+    400034: RigRBLeg1
+    400036: RigRBLeg2
+    400038: RigRBLegAnkle
+    400040: RigRBLegDigit11
+    400042: RigREyelid
+    400044: RigRFLeg1
+    400046: RigRFLeg2
+    400048: RigRFLegAnkle
+    400050: RigRFLegCollarbone
+    400052: RigRFLegDigit11
+    400054: RigRigLEar1
+    400056: RigRigREar1
+    400058: RigRoot
+    400060: RigSpine1
+    400062: RigSpine2
+    400064: RigTail1
+    400066: RigTail2
+    400068: RigTongue_1
+    400070: RigTongue_2
+    400072: RigTongue_3
+    400074: SK-AnimalsBear_Bear
+    2100000: MAT-AnimalsBear_Bear
+    4300000: SK-AnimalsBear_Bear
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: SK-AnimalsBear_Bear
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 1982
+      lastFrame: 2914
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.0254
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
