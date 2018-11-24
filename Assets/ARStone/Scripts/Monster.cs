@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Monster : MonoBehaviour
+public abstract class Monster : MonoBehaviour
 {
 
     private int total_life;
@@ -51,4 +51,35 @@ public class Monster : MonoBehaviour
             Debug.Log("I am dead da silva");
         }
     }
+}
+
+public abstract class PlayerMonster: Monster
+{
+    private bool attacking = false;
+    private bool defending = false;
+
+    public void Attacking(bool atck)
+    {
+        attacking = atck;
+    }
+
+    public bool GetAttacking()
+    {
+        return attacking;
+    }
+
+    public void Defending(bool dfnd)
+    {
+        defending = dfnd;
+    }
+
+    public bool GetDefending()
+    {
+        return defending;
+    }
+}
+
+public abstract class Boss: Monster
+{
+
 }
