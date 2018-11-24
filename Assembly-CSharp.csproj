@@ -64,6 +64,7 @@
     <Compile Include="Assets\Almgp_particle_vol_1\script\sprite_sheet.cs" />
     <Compile Include="Assets\ARStone\Reticle\ReticleTest.cs" />
     <Compile Include="Assets\ARStone\Scripts\ArmorManager.cs" />
+    <Compile Include="Assets\ARStone\Scripts\BearManager.cs" />
     <Compile Include="Assets\ARStone\Scripts\buttomScript.cs" />
     <Compile Include="Assets\ARStone\Scripts\FireballManager.cs" />
     <Compile Include="Assets\ARStone\Scripts\FireDragonManager.cs" />

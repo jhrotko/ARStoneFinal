@@ -32,13 +32,14 @@ public class ReticleTest : MonoBehaviour {
             Debug.Log("Did Hit " +  hit.transform.gameObject.name);
 
             
-            if( hit.transform.gameObject.name == "AttackButton")
-            {
 
-                if (Attacktimer < 2.0f)
+            if ( hit.transform.gameObject.name == "AttackButton")
+            {
+                PlayerMonster creature = getCreature(hit);
+                if (creature.GetAttackTimer() < 2.0f)
                 {
                     hit.transform.gameObject.GetComponent<MeshRenderer>().material = ButtonOvered;
-                    Attacktimer += Time.deltaTime;
+                    creature.SetAttackTimer(creature.GetAttackTimer() + Time.deltaTime);
 
                     if (modifiedGameObject != null && modifiedGameObject.name == "DefendButton" && modifiedGameObject.transform.parent == hit.transform.parent)
                     { 
@@ -46,20 +47,20 @@ public class ReticleTest : MonoBehaviour {
                         {
                             modifiedGameObject.GetComponent<MeshRenderer>().material = ButtonIdle;
                             modifiedGameObject = hit.transform.gameObject;
-                            Defendtimer = 0.0f;
+                            creature.SetDefendTimer(0.0f);
                         }
                     }
                 }
 
                 else
                 {
-                    PlayerMonster creature = getCreature(hit);
+                    
                     //Must be the buttons from the same creature and Defend Button cannot be slected
                     if (creature.GetDefending())
                     {
                         creature.Defending(false);
                         hit.transform.gameObject.transform.parent.Find("DefendButton").GetComponent<MeshRenderer>().material = ButtonIdle;
-                        Defendtimer = 0.0f;
+                        creature.SetDefendTimer(0.0f);
                         defendSelected = false;
 
                     } 
@@ -72,11 +73,12 @@ public class ReticleTest : MonoBehaviour {
 
             else if (hit.transform.gameObject.name == "DefendButton")
             {
-               //Hover Button
-                if (Defendtimer < 2.0f)
+                PlayerMonster creature = getCreature(hit);
+                //Hover Button
+                if (creature.GetDefendTimer() < 2.0f)
                 {
                     hit.transform.gameObject.GetComponent<MeshRenderer>().material = ButtonOvered;
-                    Defendtimer += Time.deltaTime;
+                    creature.SetDefendTimer( creature.GetDefendTimer() + Time.deltaTime);
 
                     //Turn the other button idle
                     if (modifiedGameObject != null && modifiedGameObject.name == "AttackButton" && modifiedGameObject.transform.parent == hit.transform.parent)
@@ -85,7 +87,7 @@ public class ReticleTest : MonoBehaviour {
                         {
                             modifiedGameObject.GetComponent<MeshRenderer>().material = ButtonIdle;
                             modifiedGameObject = hit.transform.gameObject;
-                            Attacktimer = 0.0f;
+                            creature.SetAttackTimer(0.0f);
                         }
                     }
                 }
@@ -93,14 +95,13 @@ public class ReticleTest : MonoBehaviour {
                 //Select Button
                 else
                 {
-                    PlayerMonster creature = getCreature(hit);
+                    
                     if (creature.GetAttacking())
                     {
-                        Debug.Log("dsfsdfsdfsdfsdfsdfjhgsdjhfjdsgfhjsdgfhjsdgfjhsdgjhfgshjdgfhsjdgfjshdgfhsjd");
                         creature.Attacking(false);
                         attackSelected = false;
                         hit.transform.gameObject.transform.parent.Find("AttackButton").GetComponent<MeshRenderer>().material = ButtonIdle;
-                        Attacktimer = 0.0f;
+                        creature.SetAttackTimer(0.0f);
                     }
 
                     hit.transform.gameObject.GetComponent<MeshRenderer>().material = ButtonSelected;
@@ -132,17 +133,20 @@ public class ReticleTest : MonoBehaviour {
     {
         if (modifiedGameObject != null)
         {
+            
             if (modifiedGameObject.name == "AttackButton" && !attackSelected)
             {
+                PlayerMonster creature = getCreature(modifiedGameObject);
                 modifiedGameObject.GetComponent<MeshRenderer>().material = ButtonIdle;
                 //modifiedGameObject = null;
-                Attacktimer = 0.0f;
+                creature.SetAttackTimer(0.0f);
             }
             else if (modifiedGameObject.name == "DefendButton" && !defendSelected)
             {
+                PlayerMonster creature = getCreature(modifiedGameObject);
                 modifiedGameObject.GetComponent<MeshRenderer>().material = ButtonIdle;
                 //modifiedGameObject = null;
-                Defendtimer = 0.0f;
+                creature.SetDefendTimer(0.0f);
             }
             
         }
@@ -152,9 +156,23 @@ public class ReticleTest : MonoBehaviour {
     {
         string creatureName = hit.transform.gameObject.transform.parent.gameObject.name;
         creatureName = creatureName.Substring(3, creatureName.Length - 3);
-
-        PlayerMonster creature = GameObject.Find(creatureName).GetComponent<PlayerMonster>();
+        
+        //Create need to have the name IT_X => Creater Name is X
         Debug.Log(" Creature name: " + creatureName);
+        PlayerMonster creature = GameObject.Find(creatureName).GetComponent<PlayerMonster>();
+        
+        return creature;
+    }
+
+    private PlayerMonster getCreature(GameObject button)
+    {
+        string creatureName = button.transform.parent.gameObject.name;
+        creatureName = creatureName.Substring(3, creatureName.Length - 3);
+
+        //Create need to have the name IT_X => Creater Name is X
+        Debug.Log(" Creature name: " + creatureName);
+        PlayerMonster creature = GameObject.Find(creatureName).GetComponent<PlayerMonster>();
+
         return creature;
     }
 
