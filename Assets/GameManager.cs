@@ -29,13 +29,13 @@ public class GameManager : MonoBehaviour {
 			Title.text = "";
 			timer = 0.0f;
 		}
-		Debug.Log("Player Life " + player.GetLife());
+		//Debug.Log("Player Life " + player.GetLife());
 		if(player.GetLife() <= 0) {
 			Title.text = "Game Over";
 		}
 
 		if(PlayerTurn) {
-			Debug.Log("Player Turn");
+			//Debug.Log("Player Turn");
 			Turn.text = "Your Turn";
 		} else {
 			Debug.Log("ENEMY TURN");

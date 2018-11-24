@@ -10,7 +10,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace>
     </RootNamespace>
-    <ProjectGuid>{41A89BC2-D11B-DFAD-49D1-1D596FF4375E}</ProjectGuid>
+    <ProjectGuid>{4D857C47-00A8-9C6C-FDC9-074FD5CE1F1C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>VuforiaEditorScripts</AssemblyName>
@@ -303,10 +303,10 @@
       <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="Google.ProtocolBuffers">
-      <HintPath>C:/Users/Jana/Desktop/New folder/ARLatest/Nova pasta/ARstone/Assets/GoogleVR/Plugins/Google.ProtocolBuffers.dll</HintPath>
+      <HintPath>C:/Users/Jana/Documents/GitHub/RV_Final/ARStoneFinal/Assets/GoogleVR/Plugins/Google.ProtocolBuffers.dll</HintPath>
     </Reference>
     <Reference Include="JMOAssets">
-      <HintPath>C:/Users/Jana/Desktop/New folder/ARLatest/Nova pasta/ARstone/Assets/JMO Assets/Editor/JMOAssets.dll</HintPath>
+      <HintPath>C:/Users/Jana/Documents/GitHub/RV_Final/ARStoneFinal/Assets/JMO Assets/Editor/JMOAssets.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.Advertisements">
       <HintPath>C:/Users/Jana/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>
@@ -356,7 +356,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="VuforiaScripts.csproj">
-      <Project>{7A9160B5-C619-98D6-26E0-F580BF2A1648}</Project>
+      <Project>{B6BE0F94-E2BD-AD42-0E0A-94AA8160D226}</Project>
       <Name>VuforiaScripts</Name>
     </ProjectReference>
   </ItemGroup>
