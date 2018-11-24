@@ -1,6 +1,6 @@
 Android
 PlayerPath?
-C:/Users/JP/AppData/Roaming/Microsoft/Windows/Network Shortcuts/asd.apk
+C:/Users/Jana/Desktop/test.apk
 SceneListBegin?
 Assets/Scenes/ARStone.unity
 SceneListEnd?
@@ -8,6 +8,7 @@ a27b9b0408f79c2346e2e2ee7fc5acde Assembly-CSharp.dll:.WFX_Demo
 6fdd04423d8afac8fd5901c0e00e5635 Assembly-CSharp.dll:.FireballManager
 f97043051af62faf4273acfa5a0950ed Assembly-CSharp.dll:.CFX_Demo_Translate
 92d462274ec1e5f662ba61a3d66ddba5 Assembly-CSharp.dll:GoogleVR.HelloVR.HeadsetDemoManager
+9ff9a4d7415e4a37a9a8bb95a9752003 Assembly-CSharp.dll:.ReticleTest
 486cd95c82d8305219c352c06b776e1f UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
 9e61f3535f3c55760a1cedfbd114f4af UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationTrack
 754551afe4f2531f58476bf14c510657 UnityEngine.Timeline.dll:UnityEngine.Timeline.AnimationPlayableAsset
@@ -91,6 +92,7 @@ e90403eeda069970e0b9de1533de13a6 UnityEngine.UI.dll:UnityEngine.UI.ToggleGroup
 12e22429ddcbd11541f75bffb3ef6fd6 Assembly-CSharp.dll:GoogleVR.PermissionsDemo.PermissionsFlowManager
 f46eb1797fb520e80d5d530f879a2187 Assembly-CSharp.dll:GoogleVR.VideoDemo.MenuHandler
 486cd95c82d8305219c352c06b776e1f VuforiaScripts.dll:.DefaultInitializationErrorHandler
+ae41c6f0c3ee6f475e70e7aef8f72e68 Assembly-CSharp.dll:.GvrAudioRoom
 092c59be351226b67df80a068aa19273 Assembly-CSharp.dll:.WFX_Demo_New
 c5d466bec0f77b2e519c677e4e85de44 Assembly-CSharp.dll:.GvrDropdown
 486cd95c82d8305219c352c06b776e1f UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
@@ -126,6 +128,7 @@ da21fc3f8056b1f91c3dd09c7bf4f90a UnityEngine.Networking.dll:UnityEngine.Networki
 fc061f3ae8a876c0687e86378d4a447c UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformChild
 7ca56e063bd071986fff4f513cc4f477 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
 0a006f3734181ba8b26758f0866152c0 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
+da4f1de76ae3cffaa6fb1edbd244ad4f Assembly-CSharp.dll:.GvrAudioSoundfield
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.GvrControllerTooltipsSimple
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.InstantPreviewHelper
 382b8ef512fa8d6108723a01b57af65b UnityEngine.Analytics.dll:UnityEngine.Analytics.AnalyticsEventTracker
@@ -179,7 +182,6 @@ c31ff9acb65f7a15b5c6fd77c3314d83 Vuforia.UnityExtensions.dll:Vuforia.WireframeBe
 727421d27911f5f928efac49dbe904b4 Assembly-CSharp.dll:.PlayerManager
 52128114175baf1b2307cc886691adf3 Assembly-CSharp.dll:.sprite_sheet
 a4affc5499f88a1fa47ba9c7d2f8bbc4 Assembly-CSharp.dll:.buttomScript
-5c79f77e8bdc4433e7f19266d4a50278 Assembly-CSharp.dll:.GvrController
 182e416670915c50a548c38c642db0d8 Vuforia.UnityExtensions.dll:Vuforia.AnchorBehaviour
 f35860350df72508419d9f9fcd288594 Vuforia.UnityExtensions.dll:Vuforia.AnchorInputListenerBehaviour
 182e416670915c50a548c38c642db0d8 Vuforia.UnityExtensions.dll:Vuforia.AnchorStageBehaviour
@@ -217,21 +219,19 @@ c31ff9acb65f7a15b5c6fd77c3314d83 Vuforia.UnityExtensions.dll:Vuforia.WireframeBe
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.GvrHeadset
 17de2b8f2b9439108aa4c86d4ef3ac76 Assembly-CSharp.dll:GoogleVR.VideoDemo.ToggleAction
 3ac8d5b7f4bcbee3d7bbb3a138961f8d Assembly-CSharp.dll:.GvrLaserVisual
-da4f1de76ae3cffaa6fb1edbd244ad4f Assembly-CSharp.dll:.GvrAudioSoundfield
 e241599c091a039de89f5e0a1c125183 Assembly-CSharp.dll:.GvrControllerReticleVisual
 8165f566359b756a76b5f11bc098660e Assembly-CSharp.dll:.CFX_Demo_RandomDir
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:Gvr.Internal.EmulatorManager
 c38d4f93b10fbc8870723718c1b9983d Assembly-CSharp.dll:.CFX_Demo_RotateCamera
 d35643032bcfbeb09abc5617518db546 Assembly-CSharp.dll:.Projectile
+b66f5b029ce56d4232498c8a84cdb230 Assembly-CSharp.dll:.GvrAudioListener
 2dc63230bccf87483fdffbcb0dff2559 Assembly-CSharp.dll:.GvrPointerGraphicRaycaster
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.GvrPointerManager
 276a536df9576d99b4b78d9325d4d4f5 Assembly-CSharp.dll:.CFX_AutoDestructShuriken
 8165f566359b756a76b5f11bc098660e Assembly-CSharp.dll:.WFX_Demo_RandomDir
 aff6f42589301fb2188ebc9e62508e1b Assembly-CSharp.dll:.GvrAllEventsTrigger
 4c95dbe3ca6f79dc80fc80539b8460c7 Assembly-CSharp.dll:.GvrPointerInputModule
-0e071e8c9b835f56b2090ddc703cc62a Assembly-CSharp.dll:.GvrControllerVisualManager
 bd1e9ef58438f577497c159b14f8c5b6 Assembly-CSharp.dll:.CFX_LightIntensityFade
-344cfd4ecff3ba380972326227cc7837 Assembly-CSharp.dll:.GvrAudioSource
 0917bd550a423c59cb946ff2d7b4efb1 Assembly-CSharp.dll:GoogleVR.HelloVR.ObjectController
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.ArmorManager
 2d1ef5186ac8f5ee44b3e43d9ff420bb Assembly-CSharp.dll:GoogleVR.HelloVR.HelloVRManager
@@ -259,6 +259,7 @@ e033f131358cea5a0eabf9561e781deb UnityEngine.TestRunner.dll:UnityEngine.TestTool
 70f7dc248db3379548a88e8d4fa049f8 UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioRoom
 28a95668dd28649297d595834fe8417e UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioSoundfieldExtension
 28a95668dd28649297d595834fe8417e UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioSourceExtension
+0e071e8c9b835f56b2090ddc703cc62a Assembly-CSharp.dll:.GvrControllerVisualManager
 1a90b221dc803408fbafa883c12bcab4 UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioListenerExtension
 70f7dc248db3379548a88e8d4fa049f8 UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioRoom
 28a95668dd28649297d595834fe8417e UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioSoundfieldExtension
@@ -266,7 +267,6 @@ e033f131358cea5a0eabf9561e781deb UnityEngine.TestRunner.dll:UnityEngine.TestTool
 bda0a27cd4d9116a0b3ec51a3800512c Assembly-CSharp.dll:.GvrControllerVisual
 f806e1557c77bca314fc723de008fc91 Assembly-CSharp.dll:.GvrReticlePointer
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.Monster
-ae41c6f0c3ee6f475e70e7aef8f72e68 Assembly-CSharp.dll:.GvrAudioRoom
 85abb8d34aa02aa4b24219930276520f Assembly-CSharp.dll:.WFX_LightFlicker
 25f8fc9d332fd13a1f757825061d78a8 Assembly-CSharp.dll:GoogleVR.VideoDemo.PositionSwapper
 d75dc834c5dec688db75a55a1724c90f UnityEngine.HoloLens.dll:UnityEngine.Audio.AudioSpatializerMicrosoft
@@ -279,16 +279,17 @@ bfab08b5fe4686237fa3f5a307549eb0 Assembly-CSharp.dll:GoogleVR.VideoDemo.SwitchVi
 0a006f3734181ba8b26758f0866152c0 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 ad1d09ddd6b16f92c263c9be09550446 Assembly-CSharp.dll:GoogleVR.Demos.DemoInputManager
 0a1002159b330952c1cab3ae0846d48c Assembly-CSharp.dll:.GvrKeyboard
-b66f5b029ce56d4232498c8a84cdb230 Assembly-CSharp.dll:.GvrAudioListener
 114f0cc7a933eba0210dca55a814a26d Assembly-CSharp.dll:.GvrLaserPointer
 f9321b860fc22820c43b0402a39076f9 Assembly-CSharp.dll:.WFX_Demo_Wall
 e39ce014d06046cc755e4d88993775f4 Assembly-CSharp.dll:.WFX_BulletHoleDecal
 891e7f52d782b78aeb00f534553768ac Assembly-CSharp.dll:Gvr.Internal.EmulatorConfig
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:Gvr.Internal.EmulatorClientSocket
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:GoogleVR.VideoDemo.ScrubberEvents
+344cfd4ecff3ba380972326227cc7837 Assembly-CSharp.dll:.GvrAudioSource
 a6e7f3e0084c904c688b5f7a0f460df0 Assembly-CSharp.dll:.GvrPointerPhysicsRaycaster
 ec5470f8422a5983bc546b58ba171cca Assembly-CSharp.dll:.CFX_SpawnSystem
 1ec36a54dd13a7ff27d8977d6e4e791a Assembly-CSharp.dll:GoogleVR.KeyboardDemo.KeyboardDelegateExample
+5c79f77e8bdc4433e7f19266d4a50278 Assembly-CSharp.dll:.GvrController
 5c79f77e8bdc4433e7f19266d4a50278 Assembly-CSharp.dll:.GvrControllerInput
 182e416670915c50a548c38c642db0d8 Vuforia.UnityExtensions.dll:Vuforia.AnchorBehaviour
 f35860350df72508419d9f9fcd288594 Vuforia.UnityExtensions.dll:Vuforia.AnchorInputListenerBehaviour

@@ -66,6 +66,7 @@
     <Compile Include="Assets\ARStone\Reticle\ReticleTest.cs" />
     <Compile Include="Assets\ARStone\Scripts\buttomScript.cs" />
     <Compile Include="Assets\ARStone\Scripts\Life.cs" />
+    <Compile Include="Assets\ARStone\Scripts\Monster.cs" />
     <Compile Include="Assets\ARStone\Scripts\scri.cs" />
     <Compile Include="Assets\Assets\Scripts\CannonSystem.cs" />
     <Compile Include="Assets\Assets\Scripts\CustomVuforiaButton.cs" />
@@ -195,7 +196,6 @@
     <Compile Include="Assets\JMO Assets\WarFX\Scripts\WFX_BulletHoleDecal.cs" />
     <Compile Include="Assets\JMO Assets\WarFX\Scripts\WFX_LightFlicker.cs" />
     <Compile Include="Assets\JMO Assets\WarFX\Spawn System\CFX_SpawnSystem.cs" />
-    <Compile Include="Assets\Monster.cs" />
     <Compile Include="Assets\NoiseBrush\NoiseBrush.cs" />
     <Compile Include="Assets\NoiseBrush\Scripts\Matrix.cs" />
     <Compile Include="Assets\NoiseBrush\Scripts\Noise.cs" />

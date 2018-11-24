@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ZombieManager : Monster {
 
-    private int total_life;
+    /*private int total_life;
     public int damage = 50;
     public int life = 50;
     //public int player_life = 30;
@@ -16,9 +16,9 @@ public class ZombieManager : Monster {
     private float timer = -1;
     public GameManager gm;
 
-    // Use this for initialization
+    //Use this for initialization
     void Start () {
-        gm.PlayerCard = this;
+        /*gm.PlayerCard = this;
         total_life = life;
         lifeText.text = "" + life;
         damageText.text = "" + damage;
@@ -54,11 +54,11 @@ public class ZombieManager : Monster {
             GameObject.Find("ZLifeStatus").SetActive(false);
             Destroy(gameObject);
         }
-    }
+    }*/
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.name == "Armour_Helmet")
+        /*if(collision.gameObject.name == "Armour_Helmet")
         {
             life += armour.GetBuff();
             lifeText.color = Color.green;
@@ -69,6 +69,6 @@ public class ZombieManager : Monster {
             damageText.color = Color.red;
             timer = 0;
             weapon.gameObject.SetActive(false);
-        }
+        }*/
     }
 }

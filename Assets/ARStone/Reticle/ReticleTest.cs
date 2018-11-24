@@ -39,29 +39,41 @@ public class ReticleTest : MonoBehaviour {
         layerMask = ~layerMask;
 
         RaycastHit hit;
-        bool didHit = Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, Mathf.Infinity, layerMask);
         // Does the ray intersect any objects excluding the player layer
-        if (didHit)
+        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 10, layerMask))
         {
             Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.red);
-            Debug.Log("Did Hit");
+            Debug.Log("Did Hit " +  hit.transform.gameObject.name);
 
             if(hit.transform.gameObject.name == "Zombie")
             {
                 Debug.Log("I hited the zoombie");
+                revertButtonMaterial();
+
             }
             else if( hit.transform.gameObject.name == "ZAttackButton")
             {
                 hit.transform.gameObject.GetComponent<MeshRenderer>().material = ButtonSelected;
                 modifiedGameObject = hit.transform.gameObject;
             }
+
+            
         }
         else
         {
-            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 1000, Color.white);
+            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.white);
             Debug.Log("Did not Hit");
 
-            if(modifiedGameObject.name == "ZAttackButton")
+            revertButtonMaterial();
+
+        }
+    }
+
+    private void revertButtonMaterial()
+    {
+        if (modifiedGameObject != null)
+        {
+            if (modifiedGameObject.name == "ZAttackButton")
             {
                 modifiedGameObject.GetComponent<MeshRenderer>().material = ButtonIdle;
                 modifiedGameObject = null;
