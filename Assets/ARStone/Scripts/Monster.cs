@@ -83,11 +83,19 @@ public abstract class Boss : Monster
     {
         lifeText.text = "" + life;
         damageText.text = "" + damage;
+
+        if(life <= 0)
+        {
+            Animator anim = GetComponent<Animator>();
+            anim.Play("Death");
+        }
     }
 
     public void BossTurn(List<PlayerMonster> targets)
     {
-        foreach(PlayerMonster monster in targets)
+        Animator anim = GetComponent<Animator>();
+        anim.Play("Damaged");
+        foreach (PlayerMonster monster in targets)
         {
             //Boss only attacks Creatures that are not Defending
             if(!monster.GetDefending())
