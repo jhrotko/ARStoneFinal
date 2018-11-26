@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Vuforia;
 
 public abstract class Monster : MonoBehaviour
 {
@@ -40,69 +41,61 @@ public abstract class Monster : MonoBehaviour
 
         if (life <= 0)
         {
-            /*player.DecreaseLife(total_life);
-            //player.DecreaseLife(30);
-            //Debug.Log("Zombie dead, player life =" + player.GetLife());
-            lifeText.gameObject.SetActive(false);
-            damageText.gameObject.SetActive(false);
-            GameObject.Find("ZAttackStatus").SetActive(false);
-            GameObject.Find("ZLifeStatus").SetActive(false);
-            Destroy(gameObject);*/
+            lifeText.transform.parent.gameObject.SetActive(false);
+            damageText.transform.parent.gameObject.SetActive(false);
+
+            GameObject parent = gameObject.transform.parent.gameObject;
+            parent.transform.Find("AttackButton").gameObject.SetActive(false);
+            parent.transform.Find("DefendButton").gameObject.SetActive(false);
+
+            gameObject.SetActive(false);
             Debug.Log("I am dead da silva");
         }
     }
-}
 
-public abstract class PlayerMonster: Monster
-{
-    private bool attacking = false;
-    private bool defending = false;
-
-    private float AttackTimer = 0.0f;
-    private float DefendTimer = 0.0f;
-
-    public float GetAttackTimer()
+    public void DecreaseLife(int delta)
     {
-        return AttackTimer;
+        life -= delta;
     }
 
-    public float GetDefendTimer()
+    public int GetDamage()
     {
-        return DefendTimer;
+        return damage;
     }
 
-    public void SetAttackTimer(float time)
+    public int GetLife()
     {
-        AttackTimer = time;
+        return life;
     }
 
-    public void SetDefendTimer(float time)
+    public int GetTotalLife()
     {
-        DefendTimer = time;
-    }
-
-    public void Attacking(bool atck)
-    {
-        attacking = atck;
-    }
-
-    public bool GetAttacking()
-    {
-        return attacking;
-    }
-
-    public void Defending(bool dfnd)
-    {
-        defending = dfnd;
-    }
-
-    public bool GetDefending()
-    {
-        return defending;
+        return total_life;
     }
 }
 
-public abstract class Boss: Monster
+
+
+public abstract class Boss : Monster
 {
 
+    void Update()
+    {
+        lifeText.text = "" + life;
+        damageText.text = "" + damage;
+    }
+
+    public void BossTurn(List<PlayerMonster> targets)
+    {
+        foreach(PlayerMonster monster in targets)
+        {
+            //Boss only attacks Creatures that are not Defending
+            if(!monster.GetDefending())
+            {
+                Debug.Log(monster + " attacking !");
+                monster.DecreaseLife(damage);
+                life -= monster.GetDamage();
+            }
+        }
+    }
 }

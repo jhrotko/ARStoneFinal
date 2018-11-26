@@ -72,6 +72,7 @@
     <Compile Include="Assets\ARStone\Scripts\Life.cs" />
     <Compile Include="Assets\ARStone\Scripts\Monster.cs" />
     <Compile Include="Assets\ARStone\Scripts\PlayerManager.cs" />
+    <Compile Include="Assets\ARStone\Scripts\PlayerMonster.cs" />
     <Compile Include="Assets\ARStone\Scripts\scri.cs" />
     <Compile Include="Assets\ARStone\Scripts\WeaponManager.cs" />
     <Compile Include="Assets\ARStone\Scripts\ZombieManager.cs" />

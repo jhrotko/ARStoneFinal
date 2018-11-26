@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FireDragonManager : MonoBehaviour {
+public class FireDragonManager : Boss {
 
-    public int life = 30;
+    /*public int life = 30;
     public int damage = 3;
     private float timer = 0.0f;
     private float timerMax = 3.0f;
@@ -63,5 +63,5 @@ public class FireDragonManager : MonoBehaviour {
             Destroy(gameObject);
         }
 
-    }
+    }*/
 }
