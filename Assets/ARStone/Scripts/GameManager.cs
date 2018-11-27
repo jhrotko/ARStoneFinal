@@ -66,6 +66,7 @@ public class GameManager : MonoBehaviour {
             
             //If some mosnter dies, player's life decreases the mosnter health
             foreach(PlayerMonster creature in playerHand) {
+                
                 if(creature.GetLife() <= 0)
                 {
                     playerHand.Remove(creature);
@@ -127,11 +128,14 @@ public class GameManager : MonoBehaviour {
     {
         foreach (PlayerMonster monster in playerHand)
         {
+            
             if (!monster.GetAttacking())
             {
                 //Default is Defend
                 monster.Defending(true);
             }
+
+            monster.PlayAnimation();
         }
     }
 }

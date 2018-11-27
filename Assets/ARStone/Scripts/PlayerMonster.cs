@@ -50,4 +50,23 @@ public class PlayerMonster : Monster
         return defending;
     }
 
+    public void PlayAnimation()
+    {
+        Animator anim = GetComponent<Animator>();
+        if (attacking)
+        {
+            anim.Play("attack");
+        } else if(defending)
+        {
+            anim.Play("defend");
+        }
+    }
+
+    public void PlayDead()
+    {
+        Animator anim = GetComponent<Animator>();
+
+        anim.Play("dead");
+    }
+
 }

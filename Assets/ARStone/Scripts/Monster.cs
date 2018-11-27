@@ -13,6 +13,7 @@ public abstract class Monster : MonoBehaviour
     public TextMesh lifeText;
     public TextMesh damageText;
     private float timer = -1;
+    private float deadTimer;
 
 
     // Use this for initialization
@@ -41,15 +42,22 @@ public abstract class Monster : MonoBehaviour
 
         if (life <= 0)
         {
-            lifeText.transform.parent.gameObject.SetActive(false);
-            damageText.transform.parent.gameObject.SetActive(false);
+            deadTimer += Time.deltaTime;
 
-            GameObject parent = gameObject.transform.parent.gameObject;
-            parent.transform.Find("AttackButton").gameObject.SetActive(false);
-            parent.transform.Find("DefendButton").gameObject.SetActive(false);
+            if(deadTimer >= 3.0f)
+            {
+                lifeText.transform.parent.gameObject.SetActive(false);
+                damageText.transform.parent.gameObject.SetActive(false);
 
-            gameObject.SetActive(false);
-            Debug.Log("I am dead da silva");
+                GameObject parent = gameObject.transform.parent.gameObject;
+                parent.transform.Find("AttackButton").gameObject.SetActive(false);
+                parent.transform.Find("DefendButton").gameObject.SetActive(false);
+
+                gameObject.SetActive(false);
+                Debug.Log("I am dead da silva");
+                deadTimer = 0.0f;
+            }
+
         }
     }
 
@@ -72,6 +80,8 @@ public abstract class Monster : MonoBehaviour
     {
         return total_life;
     }
+
+
 }
 
 
@@ -95,15 +105,31 @@ public abstract class Boss : Monster
     {
         Animator anim = GetComponent<Animator>();
         anim.Play("Damaged");
+
+        bool SomeAttacked = false;
         foreach (PlayerMonster monster in targets)
         {
             //Boss only attacks Creatures that are not Defending
             if(!monster.GetDefending())
             {
+                SomeAttacked = true;
                 Debug.Log(monster + " attacking !");
                 monster.DecreaseLife(damage);
                 life -= monster.GetDamage();
+
+                if(monster.GetLife() <= 0)
+                {
+                    monster.PlayDead();
+                }
             }
+        }
+
+        if(SomeAttacked)
+        {
+            anim.Play("Damaged");
+        } else
+        {
+            anim.Play("Attack");
         }
     }
 }
