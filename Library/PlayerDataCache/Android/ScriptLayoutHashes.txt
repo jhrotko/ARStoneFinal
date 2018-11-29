@@ -1,6 +1,6 @@
 Android
 PlayerPath?
-C:/Users/Jana/Desktop/test.apk
+C:/Users/João/Documents/RV/ARStoneFinal/th.apk
 SceneListBegin?
 Assets/Scenes/ARStone.unity
 SceneListEnd?
@@ -179,7 +179,7 @@ c1087bf328bbb39eba5a09f26c3b6368 Vuforia.UnityExtensions.dll:Vuforia.MultiTarget
 c8a41ce4eea7677f6dd2aa0e422a2f04 Vuforia.UnityExtensions.dll:Vuforia.VuMarkBehaviour
 c31ff9acb65f7a15b5c6fd77c3314d83 Vuforia.UnityExtensions.dll:Vuforia.WireframeBehaviour
 486cd95c82d8305219c352c06b776e1f Vuforia.UnityExtensions.dll:Vuforia.WireframeTrackableEventHandler
-727421d27911f5f928efac49dbe904b4 Assembly-CSharp.dll:.PlayerManager
+b97796dade6da3dc182e8812d9605a57 Assembly-CSharp.dll:.PlayerManager
 52128114175baf1b2307cc886691adf3 Assembly-CSharp.dll:.sprite_sheet
 a4affc5499f88a1fa47ba9c7d2f8bbc4 Assembly-CSharp.dll:.buttomScript
 182e416670915c50a548c38c642db0d8 Vuforia.UnityExtensions.dll:Vuforia.AnchorBehaviour
@@ -265,6 +265,7 @@ e033f131358cea5a0eabf9561e781deb UnityEngine.TestRunner.dll:UnityEngine.TestTool
 70f7dc248db3379548a88e8d4fa049f8 UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioRoom
 28a95668dd28649297d595834fe8417e UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioSoundfieldExtension
 28a95668dd28649297d595834fe8417e UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioSourceExtension
+16ec076314672d7d106abea012ad5b8e Assembly-CSharp.dll:.PlayerMonster
 bda0a27cd4d9116a0b3ec51a3800512c Assembly-CSharp.dll:.GvrControllerVisual
 f806e1557c77bca314fc723de008fc91 Assembly-CSharp.dll:.GvrReticlePointer
 85abb8d34aa02aa4b24219930276520f Assembly-CSharp.dll:.WFX_LightFlicker
@@ -365,4 +366,3 @@ c1087bf328bbb39eba5a09f26c3b6368 Vuforia.UnityExtensions.dll:Vuforia.MultiTarget
 c8a41ce4eea7677f6dd2aa0e422a2f04 Vuforia.UnityExtensions.dll:Vuforia.VuMarkBehaviour
 c31ff9acb65f7a15b5c6fd77c3314d83 Vuforia.UnityExtensions.dll:Vuforia.WireframeBehaviour
 486cd95c82d8305219c352c06b776e1f Vuforia.UnityExtensions.dll:Vuforia.WireframeTrackableEventHandler
-16ec076314672d7d106abea012ad5b8e Assembly-CSharp.dll:.PlayerMonster
