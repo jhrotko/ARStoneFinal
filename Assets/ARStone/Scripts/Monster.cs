@@ -5,8 +5,8 @@ using Vuforia;
 
 public abstract class Monster : MonoBehaviour
 {
-
-    private int total_life;
+    protected int old_life;
+    protected int total_life;
     public int damage = 50;
     public int life = 50;
     //public int player_life = 30;
@@ -20,6 +20,7 @@ public abstract class Monster : MonoBehaviour
     void Start()
     {
         total_life = life;
+        old_life = life;
         lifeText.text = "" + life;
         damageText.text = "" + damage;
     }

@@ -3,7 +3,30 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class FireDragonManager : Boss {
-
+    public SpriteMask mask;
+    private float old_percentage = 1;
+    void Update()
+    {
+        if(old_life != life){
+            
+            lifeText.text = "" + life;
+            damageText.text = "" + damage;
+            
+            if(life <= 0)
+            {
+                Animator anim = GetComponent<Animator>();
+                anim.Play("Death");
+                Vector3 temp = new Vector3(50,0,0);
+                mask.transform.position -= temp;
+            }else{
+                
+                float percentage =(float) (old_life - life)/ total_life;
+                Vector3 temp = new Vector3(percentage,0,0);
+                mask.transform.position -= temp;
+            }
+            old_life = life;
+        }
+    }
     /*public int life = 30;
     public int damage = 3;
     private float timer = 0.0f;
