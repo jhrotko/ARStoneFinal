@@ -102,18 +102,18 @@ public abstract class Boss : Monster
         }
     }
 
+
     public void BossTurn(List<PlayerMonster> targets)
     {
         Animator anim = GetComponent<Animator>();
-        anim.Play("Damaged");
 
-        bool SomeAttacked = false;
+        anim.Play("Attack");
+        AttackSound.Play();
         foreach (PlayerMonster monster in targets)
         {
             //Boss only attacks Creatures that are not Defending
             if(!monster.GetDefending())
             {
-                SomeAttacked = true;
                 Debug.Log(monster + " attacking !");
                 monster.DecreaseLife(damage);
                 life -= monster.GetDamage();
@@ -124,14 +124,7 @@ public abstract class Boss : Monster
                 }
             }
         }
-
-        if(SomeAttacked)
-        {
-            anim.Play("Damaged");
-        } else
-        {
-            anim.Play("Attack");
-            AttackSound.Play();
-        }
     }
+
+
 }
