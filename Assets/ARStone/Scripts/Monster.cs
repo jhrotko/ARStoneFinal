@@ -53,7 +53,7 @@ public abstract class Monster : MonoBehaviour
                 GameObject parent = gameObject.transform.parent.gameObject;
                 parent.transform.Find("AttackButton").gameObject.SetActive(false);
                 parent.transform.Find("DefendButton").gameObject.SetActive(false);
-
+                
                 gameObject.SetActive(false);
                 Debug.Log("I am dead da silva");
                 deadTimer = 0.0f;
@@ -89,7 +89,7 @@ public abstract class Monster : MonoBehaviour
 
 public abstract class Boss : Monster
 {
-
+    public AudioSource AttackSound;
     void Update()
     {
         lifeText.text = "" + life;
@@ -131,6 +131,7 @@ public abstract class Boss : Monster
         } else
         {
             anim.Play("Attack");
+            AttackSound.Play();
         }
     }
 }

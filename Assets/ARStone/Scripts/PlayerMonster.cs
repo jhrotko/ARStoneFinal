@@ -6,7 +6,7 @@ public class PlayerMonster : Monster
 {
     private bool attacking = false;
     private bool defending = false;
-
+    public AudioSource Attack;
     private float AttackTimer = 0.0f;
     private float DefendTimer = 0.0f;
 
@@ -56,6 +56,7 @@ public class PlayerMonster : Monster
         if (attacking)
         {
             anim.Play("attack");
+            Attack.Play();
         } else if(defending)
         {
             anim.Play("defend");
