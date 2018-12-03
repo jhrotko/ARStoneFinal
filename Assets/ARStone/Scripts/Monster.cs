@@ -89,7 +89,10 @@ public abstract class Monster : MonoBehaviour
 
 public abstract class Boss : Monster
 {
-    public AudioSource AttackSound;
+    public AudioSource ChargedAttackSound;
+    public AudioSource AirAttackSound;
+    private static readonly System.Random getrandom = new System.Random();
+    private bool charging = false;
     void Update()
     {
         lifeText.text = "" + life;
@@ -106,24 +109,104 @@ public abstract class Boss : Monster
     public void BossTurn(List<PlayerMonster> targets)
     {
         Animator anim = GetComponent<Animator>();
-
-        anim.Play("Attack");
-        AttackSound.Play();
-        foreach (PlayerMonster monster in targets)
+        if (!charging)
         {
-            //Boss only attacks Creatures that are not Defending
-            if(!monster.GetDefending())
-            {
-                Debug.Log(monster + " attacking !");
-                monster.DecreaseLife(damage);
-                life -= monster.GetDamage();
+            
+            int randomNumber = getrandom.Next(100);
 
-                if(monster.GetLife() <= 0)
+            if (randomNumber > 40)
+            {
+
+                foreach (PlayerMonster monster in targets)
                 {
-                    monster.PlayDead();
+                    //Boss only attacks Creatures that are not Defending
+                    if (!monster.GetDefending())
+                    {
+                        
+                        life -= monster.GetDamage();
+
+                        if (life > 0)
+                        {
+                            Debug.Log(monster + " attacking !");
+                            monster.DecreaseLife(damage);
+                        }
+                        if (monster.GetLife() <= 0)
+                        {
+                            monster.PlayDead();
+                        }
+                        
+                    }
+                }
+
+                if (life > 0) { 
+                    AirAttackSound.Play();
+                    anim.Play("Flying_Attack");
+                }
+            }
+            else
+            {
+                
+                foreach (PlayerMonster monster in targets)
+                {
+                    //Boss only attacks Creatures that are not Defending
+                    if (!monster.GetDefending())
+                    {
+                        life -= monster.GetDamage();
+                        if (monster.GetLife() <= 0)
+                        {
+                            monster.PlayDead();
+                        }
+                    }
+                }
+                if (life > 0)
+                {
+                    anim.Play("Landing");
+                    charging = true;
                 }
             }
         }
+        else
+        {
+            charging = false;
+            
+            foreach (PlayerMonster monster in targets)
+            {
+                //Boss only attacks Creatures that are not Defending
+                if (!monster.GetDefending())
+                {
+                    Debug.Log(monster + " charge attacking !");
+                   
+                    life -= monster.GetDamage();
+                    if(life > 0)
+                    {
+                        monster.DecreaseLife(damage * 3);
+                        if (monster.GetLife() <= 0)
+                        {
+                            monster.PlayDead();
+                        }
+                    }
+
+                }
+                else
+                {
+                    if (life > 0)
+                    {
+                        monster.DecreaseLife(damage);
+
+                        if (monster.GetLife() <= 0)
+                        {
+                            monster.PlayDead();
+                        }
+                    }
+                }
+            }
+            if (life > 0)
+            {
+                anim.Play("Attack");
+                ChargedAttackSound.Play();
+            }
+        }
+
     }
 
 

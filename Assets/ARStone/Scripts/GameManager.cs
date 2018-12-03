@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour {
     public Boss dragonBoss;
 	
 	private float timer;
+    private bool gameFinished = false;
 	public bool PlayerTurn;
 
     public ReticleTest reticle;
@@ -28,53 +29,64 @@ public class GameManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		timer += Time.deltaTime;
-        PlayerTurn = !GameObject.Find("Reticle").GetComponent<ReticleTest>().getTurn();
-
-        UpdateCardList();
-
-        if (timer >= 2.0f) {
-			Title.text = "";
-			timer = 0.0f;
-		}
-		//Debug.Log("Player Life " + player.GetLife());
-		if(player.GetLife() <= 0) {
-			Title.text = "Game Over";
-		}
-
-        if(dragonBoss.life <= 0)
+        if (!gameFinished)
         {
-            Title.text = "YOU WON!!!";
-        }
+            timer += Time.deltaTime;
+            PlayerTurn = !GameObject.Find("Reticle").GetComponent<ReticleTest>().getTurn();
 
-		if(PlayerTurn) {
-			//Debug.Log("Player Turn");
-			Turn.text = "Your Turn";
-		} else {
-			Debug.Log("ENEMY TURN");
-			Turn.text = "Enemie's Turn";
+            UpdateCardList();
 
-            //Set default to Defend
-            SaveTurn();
-
-            //Boss Attacks!
-            dragonBoss.BossTurn(playerHand);
-
-            //Reset Board
-            
-            reticle.reset(PossibleMonsters);
-            
-            //If some mosnter dies, player's life decreases the mosnter health
-            foreach(PlayerMonster creature in playerHand) {
-                
-                if(creature.GetLife() <= 0)
-                {
-                    playerHand.Remove(creature);
-                    player.DecreaseLife(creature.GetTotalLife());
-                                        
-                }
+            if (timer >= 2.0f)
+            {
+                Title.text = "";
+                timer = 0.0f;
             }
-            PlayerTurn = true;
+            //Debug.Log("Player Life " + player.GetLife());
+            if (player.GetLife() <= 0)
+            {
+                Title.text = "Game Over";
+                gameFinished = true;
+            }
+
+            if (dragonBoss.life <= 0)
+            {
+                Title.text = "YOU WON!!!";
+                gameFinished = true;
+            }
+
+            if (PlayerTurn)
+            {
+                //Debug.Log("Player Turn");
+                Turn.text = "Your Turn";
+            }
+            else
+            {
+                Debug.Log("ENEMY TURN");
+                Turn.text = "Enemie's Turn";
+
+                //Set default to Defend
+                SaveTurn();
+
+                //Boss Attacks!
+                dragonBoss.BossTurn(playerHand);
+
+                //Reset Board
+
+                reticle.reset(PossibleMonsters);
+
+                //If some mosnter dies, player's life decreases the mosnter health
+                foreach (PlayerMonster creature in playerHand)
+                {
+
+                    if (creature.GetLife() <= 0)
+                    {
+                        playerHand.Remove(creature);
+                        player.DecreaseLife(creature.GetTotalLife());
+
+                    }
+                }
+                PlayerTurn = true;
+            }
         }
 
 	}
