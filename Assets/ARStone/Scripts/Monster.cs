@@ -14,7 +14,7 @@ public abstract class Monster : MonoBehaviour
     public TextMesh damageText;
     private float timer = -1;
     private float deadTimer;
-
+    public FCT fct;
 
     // Use this for initialization
     void Start()
@@ -65,6 +65,11 @@ public abstract class Monster : MonoBehaviour
     public void DecreaseLife(int delta)
     {
         life -= delta;
+    }
+
+    public void IncreaseDamage(int delta)
+    {
+       damage += delta;
     }
 
     public int GetDamage()
@@ -124,11 +129,13 @@ public abstract class Boss : Monster
                     {
                         
                         life -= monster.GetDamage();
+                        fct.SetPosition(monster, monster.GetDamage());
 
                         if (life > 0)
                         {
                             Debug.Log(monster + " attacking !");
                             monster.DecreaseLife(damage);
+                            fct.SetPosition(monster, damage);
                         }
                         if (monster.GetLife() <= 0)
                         {
@@ -152,6 +159,8 @@ public abstract class Boss : Monster
                     if (!monster.GetDefending())
                     {
                         life -= monster.GetDamage();
+                        fct.SetPosition(monster, monster.GetDamage());
+
                         if (monster.GetLife() <= 0)
                         {
                             monster.PlayDead();
@@ -177,9 +186,13 @@ public abstract class Boss : Monster
                     Debug.Log(monster + " charge attacking !");
                    
                     life -= monster.GetDamage();
-                    if(life > 0)
+                    fct.SetPosition(monster, monster.GetDamage());
+
+                    if (life > 0)
                     {
                         monster.DecreaseLife(damage * 3);
+                        fct.SetPosition(monster, damage * 3);
+
                         if (monster.GetLife() <= 0)
                         {
                             monster.PlayDead();
@@ -192,6 +205,7 @@ public abstract class Boss : Monster
                     if (life > 0)
                     {
                         monster.DecreaseLife(damage);
+                        fct.SetPosition(monster, damage);
 
                         if (monster.GetLife() <= 0)
                         {

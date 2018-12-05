@@ -122,7 +122,7 @@ public class GameManager : MonoBehaviour {
         }
     }
 
-    private PlayerMonster FindCreature(string creatureName)
+    public PlayerMonster FindCreature(string creatureName)
     {
         foreach(GameObject monster in PossibleMonsters)
         {

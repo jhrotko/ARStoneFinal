@@ -9,6 +9,10 @@ public class PlayerMonster : Monster
     public AudioSource Attack;
     private float AttackTimer = 0.0f;
     private float DefendTimer = 0.0f;
+    public TextMesh spellText;
+    public GameObject helmet;
+    public GameObject sword;
+
 
     public float GetAttackTimer()
     {
@@ -57,7 +61,8 @@ public class PlayerMonster : Monster
         {
             anim.Play("attack");
             Attack.Play();
-        } else if(defending)
+        }
+        else if (defending)
         {
             anim.Play("defend");
         }
@@ -70,4 +75,27 @@ public class PlayerMonster : Monster
         anim.Play("dead");
     }
 
+    void OnCollisionEnter(Collision col)
+    {
+        if (col.gameObject.tag == "Spell")
+        {
+            gameObject.transform.parent.gameObject.transform.Find("SpellButton").gameObject.SetActive(true);
+            spellText.text = col.gameObject.name;
+            Destroy(col.gameObject);
+        }
+
+        else if (col.gameObject.name == "Armour_Helmet")
+        {
+            DecreaseLife(-4);
+            helmet.SetActive(true);
+            Destroy(col.gameObject);
+        }
+
+        else if (col.gameObject.name == "Holo_Sword_FBX")
+        {
+           IncreaseDamage(2);
+           sword.SetActive(true);
+           Destroy(col.gameObject);
+        }
+    }
 }

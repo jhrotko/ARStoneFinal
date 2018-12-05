@@ -134,7 +134,7 @@ public class ReticleTest : MonoBehaviour {
                 }
                 modifiedGameObject = hit.transform.gameObject;
             }
-
+        
             else
             {
                 revertButtonMaterial();
