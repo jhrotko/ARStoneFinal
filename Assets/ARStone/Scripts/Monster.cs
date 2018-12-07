@@ -115,6 +115,7 @@ public abstract class Boss : Monster
         if (col.gameObject.tag == "Spell")
         {
             life -= 4;
+            gameObject.transform.GetChild(5).gameObject.GetComponent<TextMesh>().text = "-4";
             Destroy(col.gameObject);
             gameObject.transform.GetChild(3).gameObject.SetActive(true);    
         }
@@ -137,13 +138,15 @@ public abstract class Boss : Monster
                     {
                         
                         life -= monster.GetDamage();
-                        fct.SetPosition(gameObject, monster.GetDamage());
+                        fct.SetPosition(monster, monster.GetDamage());
+                        fct.SetPosition(gameObject, -monster.GetDamage());
 
                         if (life > 0)
                         {
                             Debug.Log(monster + " attacking !");
                             monster.DecreaseLife(damage);
-                            fct.SetPosition(monster, damage);
+                            fct.SetPosition(monster, -damage);
+                            fct.SetPosition(gameObject, damage);
                         }
                         if (monster.GetLife() <= 0)
                         {
@@ -167,7 +170,8 @@ public abstract class Boss : Monster
                     if (!monster.GetDefending())
                     {
                         life -= monster.GetDamage();
-                        fct.SetPosition(gameObject, monster.GetDamage());
+                        fct.SetPosition(gameObject, -monster.GetDamage());
+                        fct.SetPosition(monster, monster.GetDamage());
 
                         if (monster.GetLife() <= 0)
                         {
@@ -194,12 +198,15 @@ public abstract class Boss : Monster
                     Debug.Log(monster + " charge attacking !");
                    
                     life -= monster.GetDamage();
-                    fct.SetPosition(gameObject, monster.GetDamage());
+                    fct.SetPosition(gameObject, -monster.GetDamage());
+                    fct.SetPosition(monster, monster.GetDamage());
 
                     if (life > 0)
                     {
                         monster.DecreaseLife(damage * 3);
-                        fct.SetPosition(monster, damage * 3);
+                        fct.SetPosition(monster, -(damage * 3));
+                        fct.SetPosition(gameObject, damage * 3);
+
 
                         if (monster.GetLife() <= 0)
                         {
@@ -213,7 +220,8 @@ public abstract class Boss : Monster
                     if (life > 0)
                     {
                         monster.DecreaseLife(damage);
-                        fct.SetPosition(monster, damage);
+                        fct.SetPosition(monster, -damage);
+                        fct.SetPosition(gameObject, damage);
 
                         if (monster.GetLife() <= 0)
                         {

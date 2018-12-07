@@ -12,7 +12,7 @@ public class FCT : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        Move();
+        //Move();
     }
 
     private void Move()
@@ -22,15 +22,25 @@ public class FCT : MonoBehaviour {
 
     public void SetPosition(PlayerMonster pm, int damage)
     {
-        Transform transform = pm.gameObject.transform;
-        gameObject.GetComponent<TextMesh>().transform.position = transform.position;
-        gameObject.GetComponent<TextMesh>().text = damage.ToString();
+        if (damage >= 0)
+        {
+            pm.gameObject.transform.GetChild(0).gameObject.GetComponent<TextMesh>().text = damage.ToString();
+        }
+        else
+        {
+            pm.gameObject.transform.GetChild(1).gameObject.GetComponent<TextMesh>().text = damage.ToString();
+        }               
     }
 
     public void SetPosition(GameObject pm, int damage)
-    {   
-        Transform transform = pm.gameObject.transform;
-        gameObject.transform.GetChild(0).GetComponent<TextMesh>().transform.position = transform.position;
-        gameObject.transform.GetChild(0).GetComponent<TextMesh>().text = damage.ToString();
+    {
+        if (damage >= 0)
+        {
+            pm.transform.GetChild(4).gameObject.GetComponent<TextMesh>().text = damage.ToString();
+        }
+        else
+        {
+            pm.transform.GetChild(5).gameObject.GetComponent<TextMesh>().text = damage.ToString();
+        }
     }
 }

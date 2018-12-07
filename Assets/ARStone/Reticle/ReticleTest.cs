@@ -133,6 +133,8 @@ public class ReticleTest : MonoBehaviour {
                     //Change status of game
                 }
                 modifiedGameObject = hit.transform.gameObject;
+
+                //reset text here?
             }
         
             else
