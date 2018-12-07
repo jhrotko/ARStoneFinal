@@ -9,9 +9,7 @@ public class GameManager : MonoBehaviour {
     private List<PlayerMonster> playerHand = new List<PlayerMonster>();
     
     public TextMesh Title;
-    public TextMesh Turn;
-    public TextMesh Notification;
-
+  
     public Boss dragonBoss;
 	
 	private float timer;
@@ -57,12 +55,12 @@ public class GameManager : MonoBehaviour {
             if (PlayerTurn)
             {
                 //Debug.Log("Player Turn");
-                Turn.text = "Your Turn";
+               
             }
             else
             {
                 Debug.Log("ENEMY TURN");
-                Turn.text = "Enemie's Turn";
+               
 
                 //Set default to Defend
                 SaveTurn();

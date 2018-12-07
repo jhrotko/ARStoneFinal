@@ -110,8 +110,16 @@ public abstract class Boss : Monster
         }
     }
 
-
-    public void BossTurn(List<PlayerMonster> targets)
+    void OnCollisionEnter(Collision col)
+    {
+        if (col.gameObject.tag == "Spell")
+        {
+            life -= 4;
+            Destroy(col.gameObject);
+            gameObject.transform.GetChild(3).gameObject.SetActive(true);    
+        }
+    }
+        public void BossTurn(List<PlayerMonster> targets)
     {
         Animator anim = GetComponent<Animator>();
         if (!charging)
@@ -129,7 +137,7 @@ public abstract class Boss : Monster
                     {
                         
                         life -= monster.GetDamage();
-                        fct.SetPosition(monster, monster.GetDamage());
+                        fct.SetPosition(gameObject, monster.GetDamage());
 
                         if (life > 0)
                         {
@@ -159,7 +167,7 @@ public abstract class Boss : Monster
                     if (!monster.GetDefending())
                     {
                         life -= monster.GetDamage();
-                        fct.SetPosition(monster, monster.GetDamage());
+                        fct.SetPosition(gameObject, monster.GetDamage());
 
                         if (monster.GetLife() <= 0)
                         {
@@ -186,7 +194,7 @@ public abstract class Boss : Monster
                     Debug.Log(monster + " charge attacking !");
                    
                     life -= monster.GetDamage();
-                    fct.SetPosition(monster, monster.GetDamage());
+                    fct.SetPosition(gameObject, monster.GetDamage());
 
                     if (life > 0)
                     {

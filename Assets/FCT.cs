@@ -22,7 +22,15 @@ public class FCT : MonoBehaviour {
 
     public void SetPosition(PlayerMonster pm, int damage)
     {
-        //transform = pm.gameobject.transform;
+        Transform transform = pm.gameObject.transform;
+        gameObject.GetComponent<TextMesh>().transform.position = transform.position;
         gameObject.GetComponent<TextMesh>().text = damage.ToString();
+    }
+
+    public void SetPosition(GameObject pm, int damage)
+    {   
+        Transform transform = pm.gameObject.transform;
+        gameObject.transform.GetChild(0).GetComponent<TextMesh>().transform.position = transform.position;
+        gameObject.transform.GetChild(0).GetComponent<TextMesh>().text = damage.ToString();
     }
 }
