@@ -5,7 +5,7 @@ SceneListBegin?
 Assets/Scenes/ARStone.unity
 SceneListEnd?
 a27b9b0408f79c2346e2e2ee7fc5acde Assembly-CSharp.dll:.WFX_Demo
-6fdd04423d8afac8fd5901c0e00e5635 Assembly-CSharp.dll:.FireballManager
+0b038ddce0b316f2f8e6049ec679dc97 Assembly-CSharp.dll:.FireballManager
 f97043051af62faf4273acfa5a0950ed Assembly-CSharp.dll:.CFX_Demo_Translate
 92d462274ec1e5f662ba61a3d66ddba5 Assembly-CSharp.dll:GoogleVR.HelloVR.HeadsetDemoManager
 8ce6050b0a466b5384359917d38e78e2 Assembly-CSharp.dll:.ReticleTest
@@ -21,9 +21,10 @@ c7dd12c15208b0447e101f80038706df UnityEngine.Timeline.dll:UnityEngine.Timeline.A
 0ddb2c46096a1e59e0dce07886ce4769 UnityEngine.Timeline.dll:UnityEngine.Timeline.GroupTrack
 0ddb2c46096a1e59e0dce07886ce4769 UnityEngine.Timeline.dll:UnityEngine.Timeline.PlayableTrack
 64f3a13c1277a7f1324321d93d0ec13b UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
-899772a5872fa0c20392c1bd3ef82ecb Assembly-CSharp.dll:.GameManager
+e6daa70e7c921b4b2d85d23c5ba82478 Assembly-CSharp.dll:.GameManager
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.GvrXREventsSubscriber
 60dbab8ea365376d3fc2071ce9cb80b5 Assembly-CSharp.dll:NoiseBrushPlugin.NoiseBrush
+973f2eb31a4073089736a5f492e97094 Assembly-CSharp.dll:.ScrollingUVs_Layers
 53cefe5d98cadefbab750835e70b89c0 UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
 486cd95c82d8305219c352c06b776e1f UnityEngine.UI.dll:UnityEngine.EventSystems.BaseInput
 da2091a04d360891450faf16cdf621f1 UnityEngine.UI.dll:UnityEngine.UI.Button
@@ -56,7 +57,7 @@ a44114bd4fa541174f78b4bb92bacb48 UnityEngine.UI.dll:UnityEngine.EventSystems.Sta
 e90403eeda069970e0b9de1533de13a6 UnityEngine.UI.dll:UnityEngine.UI.ToggleGroup
 2d58ca16854b99daea8c45e9c0f367b7 UnityEngine.UI.dll:UnityEngine.EventSystems.TouchInputModule
 16da51d1b62ef6d4ee1849350434023b UnityEngine.UI.dll:UnityEngine.UI.VerticalLayoutGroup
-898ec1ba6b4119bf609fbcb18ad5ef3c Assembly-CSharp.dll:.FireDragonManager
+07ba7f3acd89084dea9a93a99f769915 Assembly-CSharp.dll:.FireDragonManager
 53cefe5d98cadefbab750835e70b89c0 UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
 486cd95c82d8305219c352c06b776e1f UnityEngine.UI.dll:UnityEngine.EventSystems.BaseInput
 da2091a04d360891450faf16cdf621f1 UnityEngine.UI.dll:UnityEngine.UI.Button
@@ -91,6 +92,7 @@ e90403eeda069970e0b9de1533de13a6 UnityEngine.UI.dll:UnityEngine.UI.ToggleGroup
 16da51d1b62ef6d4ee1849350434023b UnityEngine.UI.dll:UnityEngine.UI.VerticalLayoutGroup
 12e22429ddcbd11541f75bffb3ef6fd6 Assembly-CSharp.dll:GoogleVR.PermissionsDemo.PermissionsFlowManager
 f46eb1797fb520e80d5d530f879a2187 Assembly-CSharp.dll:GoogleVR.VideoDemo.MenuHandler
+486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.FCT
 486cd95c82d8305219c352c06b776e1f VuforiaScripts.dll:.DefaultInitializationErrorHandler
 ae41c6f0c3ee6f475e70e7aef8f72e68 Assembly-CSharp.dll:.GvrAudioRoom
 092c59be351226b67df80a068aa19273 Assembly-CSharp.dll:.WFX_Demo_New
@@ -142,7 +144,7 @@ d75dc834c5dec688db75a55a1724c90f UnityEngine.HoloLens.dll:UnityEngine.Audio.Audi
 e1ea12ca952c81d81a9a21fdf34446ed UnityEngine.HoloLens.dll:UnityEngine.EventSystems.HoloLensInputModule
 98d69a140ec0084cde3b6a5e09aea295 UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingCollider
 dfd33ff9ae3ce8d7ca1f22b475ec2387 UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
-9803d50a9871b0648d2b4e4f54efd52c Assembly-CSharp.dll:.ZombieManager
+baea452cd08922b2cd4f7aef05ef0fe6 Assembly-CSharp.dll:.ZombieManager
 dc6a8859049493b718ef6ac6f115c2b5 Assembly-CSharp.dll:.GvrArmModel
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.GvrEditorEmulator
 182e416670915c50a548c38c642db0d8 Vuforia.UnityExtensions.dll:Vuforia.AnchorBehaviour
@@ -230,7 +232,7 @@ b66f5b029ce56d4232498c8a84cdb230 Assembly-CSharp.dll:.GvrAudioListener
 276a536df9576d99b4b78d9325d4d4f5 Assembly-CSharp.dll:.CFX_AutoDestructShuriken
 8165f566359b756a76b5f11bc098660e Assembly-CSharp.dll:.WFX_Demo_RandomDir
 aff6f42589301fb2188ebc9e62508e1b Assembly-CSharp.dll:.GvrAllEventsTrigger
-9803d50a9871b0648d2b4e4f54efd52c Assembly-CSharp.dll:.BearManager
+baea452cd08922b2cd4f7aef05ef0fe6 Assembly-CSharp.dll:.BearManager
 4c95dbe3ca6f79dc80fc80539b8460c7 Assembly-CSharp.dll:.GvrPointerInputModule
 bd1e9ef58438f577497c159b14f8c5b6 Assembly-CSharp.dll:.CFX_LightIntensityFade
 0917bd550a423c59cb946ff2d7b4efb1 Assembly-CSharp.dll:GoogleVR.HelloVR.ObjectController
@@ -265,7 +267,7 @@ e033f131358cea5a0eabf9561e781deb UnityEngine.TestRunner.dll:UnityEngine.TestTool
 70f7dc248db3379548a88e8d4fa049f8 UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioRoom
 28a95668dd28649297d595834fe8417e UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioSoundfieldExtension
 28a95668dd28649297d595834fe8417e UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioSourceExtension
-9803d50a9871b0648d2b4e4f54efd52c Assembly-CSharp.dll:.PlayerMonster
+baea452cd08922b2cd4f7aef05ef0fe6 Assembly-CSharp.dll:.PlayerMonster
 bda0a27cd4d9116a0b3ec51a3800512c Assembly-CSharp.dll:.GvrControllerVisual
 f806e1557c77bca314fc723de008fc91 Assembly-CSharp.dll:.GvrReticlePointer
 85abb8d34aa02aa4b24219930276520f Assembly-CSharp.dll:.WFX_LightFlicker

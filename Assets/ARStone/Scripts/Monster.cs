@@ -96,6 +96,7 @@ public abstract class Boss : Monster
 {
     public AudioSource ChargedAttackSound;
     public AudioSource AirAttackSound;
+    public AudioSource SpellSound;
     private static readonly System.Random getrandom = new System.Random();
     private bool charging = false;
     void Update()
@@ -117,6 +118,7 @@ public abstract class Boss : Monster
             life -= 4;
             gameObject.transform.GetChild(5).gameObject.GetComponent<TextMesh>().text = "-4";
             Destroy(col.gameObject);
+            SpellSound.Play();
             gameObject.transform.GetChild(3).gameObject.SetActive(true);    
         }
     }
