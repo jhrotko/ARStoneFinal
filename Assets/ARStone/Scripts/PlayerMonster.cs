@@ -77,12 +77,6 @@ public class PlayerMonster : Monster
 
     void OnCollisionEnter(Collision col)
     {
-        if (col.gameObject.tag == "Spell")
-        {
-            gameObject.transform.parent.gameObject.transform.Find("SpellButton").gameObject.SetActive(true);
-            spellText.text = col.gameObject.name;
-            Destroy(col.gameObject);
-        }
 
         else if (col.gameObject.name == "Armour_Helmet")
         {
