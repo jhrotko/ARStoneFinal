@@ -78,7 +78,7 @@ public class PlayerMonster : Monster
     void OnCollisionEnter(Collision col)
     {
 
-        else if (col.gameObject.name == "Armour_Helmet")
+        if (col.gameObject.name == "Armour_Helmet")
         {
             DecreaseLife(-4);
             helmet.SetActive(true);
