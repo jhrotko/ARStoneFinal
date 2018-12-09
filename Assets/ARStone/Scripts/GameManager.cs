@@ -27,6 +27,16 @@ public class GameManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        foreach (PlayerMonster creature in playerHand)
+        {
+
+            if (creature.GetLife() <= 0)
+            {
+                playerHand.Remove(creature);
+                player.DecreaseLife(creature.GetTotalLife());
+
+            }
+        }
         if (!gameFinished)
         {
             timer += Time.deltaTime;
@@ -73,16 +83,7 @@ public class GameManager : MonoBehaviour {
                 reticle.reset(PossibleMonsters);
 
                 //If some mosnter dies, player's life decreases the mosnter health
-                foreach (PlayerMonster creature in playerHand)
-                {
 
-                    if (creature.GetLife() <= 0)
-                    {
-                        playerHand.Remove(creature);
-                        player.DecreaseLife(creature.GetTotalLife());
-
-                    }
-                }
                 PlayerTurn = true;
             }
         }
