@@ -77,6 +77,9 @@ public class GameManager : MonoBehaviour {
 
                 //Boss Attacks!
                 dragonBoss.BossTurn(playerHand);
+                if (playerHand.Count == 0) { 
+                    player.DecreaseLife(5);
+                }
 
                 //Reset Board
 
