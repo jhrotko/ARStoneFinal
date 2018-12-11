@@ -1,6 +1,6 @@
 Android
 PlayerPath?
-C:/Users/jp/Desktop/TestStone.apk
+C:/Users/jp/Desktop/ar.apk
 SceneListBegin?
 Assets/Scenes/ARStone.unity
 SceneListEnd?
